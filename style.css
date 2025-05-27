@@ -394,3 +394,90 @@ form button:hover {
   }
 }
 
+
+.serviceList{
+  cursor: pointer;
+}
+
+.serviceItem img:hover{
+  transform: scale(1.05);
+  filter: brightness(1.05);
+  cursor: pointer;
+}
+
+
+/* === INTERACTIVE HOVERS & ANIMATIONS === */
+
+/* Smooth transitions globally */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for service items */
+.serviceItem:hover {
+  background-color: #f0f8ff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Hover for cards in sectionMain */
+.card:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact form button hover is already styled,
+   but we can add a little scale effect */
+form button:hover {
+  transform: scale(1.05);
+}
+
+/* Input and textarea focus effect */
+form input:focus,
+form textarea:focus {
+  border-color: #5b03e4;
+  outline: none;
+  box-shadow: 0 0 5px rgba(91, 3, 228, 0.3);
+}
+
+/* Section title underline on hover */
+.section-title:hover {
+  color: #5b03e4;
+  cursor: default;
+  text-decoration: underline;
+}
+
+/* Service section title hover span color flick */
+.serviceRight h2 span:hover {
+  color: #ff4081;
+}
+
+/* Image zoom on hover (optional) */
+.image img:hover,
+.leftImage img:hover,
+.serviceImage img:hover,
+.infoImage img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+  cursor: pointer;
+}
+
+/* Animate appearance (fade-in) */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
